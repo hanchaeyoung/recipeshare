@@ -1,9 +1,9 @@
 {
-    "name": "레시피 공유 앱",
-    "short_name": "레시피 공유",
+    "name": "Recipe Share",
+    "short_name": "RS",
     "icons": [
         {
-            "src": "./images/icon/reciperogo.png",
+            "src": "./images/icon/reciperogo-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
