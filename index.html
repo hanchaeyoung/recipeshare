@@ -6,10 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
     <link rel="manifest" href="./manifest.json">
+    <!-- kimsQ RC CSS -->
+    <link rel="stylesheet" href="https://supsok.github.io/gbsw/touchstrap/css/touchstrap.css">
 </head>
 <body>
-    test
-    test
+    <header class="bar bar-nav bar-light bg-faded" style="background-color: white; position: fixed;">
+        <img src="images/icon/reciperogo-512x512.png" width="7%" style="margin-top: 2%;">
+        <button type="button" onclick="location.href='html/login.html'" class="btn pull-right" style="background-color: black; color: white;">로그인</button>
+        <button type="button" onclick="location.href='html/join.html'" class="btn pull-right" style="background-color: black; color: white">회원가입</button>
+    </header>
+
+    <div style="width: 90%; margin: 0 auto;">
+        <div class="input-group input-group-inset" style="margin-top: 150px;">
+            <input class="form-control" type="search" placeholder="검색어를 입력해주세요">
+        </div>
+
+        <div style="margin-top: 100px;">
+            <h3>TOP5</h3>
+            <div class="card">
+                <ul class="table-view">
+                    <li class="table-view-cell">간장계란밥 만들기</li>
+                    <li class="table-view-cell">토스트 만들기</li>
+                    <li class="table-view-cell">김밥 레시피</li>
+                    <li class="table-view-cell">쉽고 간단한 불고기 덮밥 레..</li>
+                    <li class="table-view-cell">떡볶이 만들기</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- 모달 테스트-->
+    <!-- <section class="page center" id="page1">
+        <header class="bar bar-nav" style="background-color: black; color: white;">
+            <h1 class="title">첫 번째 페이지</h1>
+        </header>
+        <main class="content">
+            <div class="content-padded">
+                <h2>레시피 공유</h2>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal01" data-start="#page1">모달열기</button>
+            </div>
+        </main>
+    </section>
+
+    <section class="modal" id="modal01">
+        <header class="bar bar-nav" style="background-color: black; color: white;">
+            <a class="icon icon-left-nav pull-left" role="button" data-history="back"></a>
+            <h1 class="title">모달</h1>
+        </header>
+        <main class="content">
+            <div class="content-padded">
+                <h2>모달입니다.</h2>
+            </div>
+        </main>
+    </section> -->
+
+    <!-- jQuery first, then kimsQ RC JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://supsok.github.io/gbsw/touchstrap/js/touchstrap.js"></script>
 </body>
 <script>
     if ('serviceWorker' in navigator) {
