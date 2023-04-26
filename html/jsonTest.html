@@ -14,21 +14,7 @@
         </header>
 
         <main class="content">
-            <div class="content-padded">
-                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal01">모달 호출</button>
-            </div>
-        </main>
-    </section>
-
-    <section class="modal" id="modal01">
-        <header class="bar bar-nav">
-            <h1 class="title"></h1>
-        </header>
-
-        <main class="content">
-            <div class="content-padded">
-
-            </div>
+            <ul class="table-view"></ul>
         </main>
     </section>
     
@@ -42,15 +28,34 @@
         // .then(response => response.json())
         // .then(json => console.log(json))
 
-        $('#modal01').on('show.rc.modal', function(event) {
-            const modal = $(this)
-            fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response => response.json())
-            .then(members => {
-            const name = members[6].name;
-            modal.find('.title').text(name)
-            console.log('name : ', name)
-            })
+        // $('#modal01').on('show.rc.modal', function(event) {
+        //     const modal = $(this)
+        //     fetch('https://jsonplaceholder.typicode.com/users')
+        //     .then(response => response.json())
+        //     .then(members => {
+        //     const name = members[6].name;
+        //     modal.find('.title').text(name)
+        //     console.log('name : ', name)
+        //     })
+        // })
+
+
+
+        fetch('https://hanchaeyoung.github.io/recipeshare/members.json')
+        .then(response => response.json())
+        .then(members => {
+            console.log(members)
+
+            members.forEach((member) => {
+                console.log(member.name);
+                let html = `<li class="table-view-cell">
+                    <a class="navigate-right">
+                        <span class="badge badge-pill">5</span>
+                        <span data-role="name">${member.name}</span>
+                    </a>
+                </li>`
+                $('.table-view').append(html)
+            });
         })
     </script>
 </body>
