@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모달 테스트</title>
+    <link rel="stylesheet" href="https://supsok.github.io/gbsw/touchstrap/css/touchstrap.css">
+    <style>
+        .line-clamp-1 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+
+        .line-clamp-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .line-clamp-3 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+<body>
+    <section class="page center">
+        <header class="bar bar-nav">
+            <h1 class="title">모달 테스트</h1>
+        </header>
+
+        <main class="content">
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal01" data-subject="안녕하세요">모달 호출</button>
+
+            <ul class="table-view">
+                <li class="table-view-cell media">
+                    <a class="navigate-right" data-toggle="modal" data-target="#modal01" data-subject="test1" data-photo="http://placehold.it/42x42" data-article="testtest">
+                    <img class="media-object pull-left" src="http://placehold.it/42x42">
+                    <div class="media-body">
+                        Item 1
+                        <p class="line-clamp-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media">
+                    <a class="navigate-right" data-toggle="modal" data-target="#modal02" data-subject="test2" data-photo="http://placehold.it/42x42" data-article="testtest">
+                    <img class="media-object pull-left" src="http://placehold.it/42x42">
+                    <div class="media-body">
+                        Item 2
+                        <p class="line-clamp-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media">
+                    <a class="navigate-right" data-toggle="modal" data-target="#modal02" data-subject="test3" data-photo="http://placehold.it/42x42" data-article="testtest">
+                    <img class="media-object pull-left" src="http://placehold.it/42x42">
+                    <div class="media-body">
+                        Item 3
+                        <p class="line-clamp-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    </a>
+                </li>
+              </ul>
+        </main>
+    </section>
+
+    <section class="modal" id="modal01">
+        <header class="bar bar-nav">
+            <h1 class="title">모달모달</h1>
+        </header>
+
+        <main class="content">
+            
+        </main>
+    </section>
+
+    <section class="modal" id="modal02">
+        <header class="bar bar-nav">
+            <h1 class="title">모달 테스트 2</h1>
+        </header>
+
+        <main class="content">
+            <h3>dkdkdkdk</h3>
+            <img src="http://placehold.it/42x42">
+        </main>
+    </section>
+    
+    <!-- jQuery first, then kimsQ RC JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://supsok.github.io/gbsw/touchstrap/js/touchstrap.js"></script>
+
+    <script>
+        $('#modal01').on('show.rc.modal', function(event) {
+            const button = $(event.relatedTarget)
+            const subject = button.data('subject')
+            const modal = $(this)
+            modal.find('.title').text(subject)
+        })
+
+        $('#modal02').on('show.rc.modal', function(event) {
+            const button = $(event.relatedTarget)
+            const subject = button.data('subject')
+            const photo = button.data('photo')
+            const article = button.data('article')
+            const modal = $(this)
+            modal.find('h3').text(subject)
+            modal.find('img').attr('src', photo)
+            modal.find('article').text(article)
+        })
+    </script>
+</body>
+</html>

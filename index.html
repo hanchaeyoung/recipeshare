@@ -8,33 +8,88 @@
     <link rel="manifest" href="./manifest.json">
     <!-- kimsQ RC CSS -->
     <link rel="stylesheet" href="https://supsok.github.io/gbsw/touchstrap/css/touchstrap.css">
+    <style>
+        .line-clamp-1 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    </style>
 </head>
 <body>
-    <header class="bar bar-nav bar-light bg-faded" style="background-color: white; position: fixed;">
-        <img src="images/icon/reciperogo-512x512.png" width="7%" style="margin-top: 2%;">
-        <button type="button" onclick="location.href='html/login.html'" class="btn pull-right" style="background-color: black; color: white;">로그인</button>
-        <button type="button" onclick="location.href='html/join.html'" class="btn pull-right" style="background-color: black; color: white">회원가입</button>
-    </header>
+    <section class="page center">
+        <header class="bar bar-nav bar-light bg-faded" style="background-color: white; position: fixed;">
+            <a href="index.html"><img src="images/icon/reciperogo-512x512.png" width="23px" style="margin-top: 10px;"></a>
+            <button type="button" onclick="location.href='html/login.html'" class="btn pull-right" style="background-color: black; color: white;">로그인</button>
+            <button type="button" onclick="location.href='html/join.html'" class="btn pull-right" style="background-color: black; color: white">회원가입</button>
+        </header>
 
-    <div style="width: 90%; margin: 0 auto;">
-        <div class="input-group input-group-inset" style="margin-top: 150px;">
-            <input class="form-control" type="search" placeholder="검색어를 입력해주세요">
-        </div>
-
-        <div style="margin-top: 100px;">
-            <h3>TOP5</h3>
-            <div class="card">
-                <ul class="table-view">
-                    <li class="table-view-cell">간장계란밥 만들기</li>
-                    <li class="table-view-cell">토스트 만들기</li>
-                    <li class="table-view-cell">김밥 레시피</li>
-                    <li class="table-view-cell">쉽고 간단한 불고기 덮밥 레..</li>
-                    <li class="table-view-cell">떡볶이 만들기</li>
-                </ul>
+        <main class="content">
+            <div style="width: 90%; margin: 0 auto;">
+                <div class="input-group input-group-inset" style="margin-top: 150px;">
+                    <input class="form-control" type="search" placeholder="검색어를 입력해주세요">
+                </div>
+        
+                <div style="margin-top: 100px;"></div>
             </div>
-        </div>
-    </div>
 
+            <ul class="table-view">
+                <li class="table-view-cell media">
+                    <a class="navigate-right" data-toggle="modal" data-target="#modal01" data-subject="test1" data-photo="http://placehold.it/42x42" data-article="testtest">
+                    <div class="media-body">
+                        Item 1
+                        <p class="line-clamp-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="table-view">
+                <li class="table-view-cell media">
+                    <a class="navigate-right" data-toggle="modal" data-target="#modal01" data-subject="test1" data-photo="http://placehold.it/42x42" data-article="testtest">
+                    <div class="media-body">
+                        Item 1
+                        <p class="line-clamp-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="table-view">
+                <li class="table-view-cell media">
+                    <a class="navigate-right" data-toggle="modal" data-target="#modal01" data-subject="test1" data-photo="http://placehold.it/42x42" data-article="testtest">
+                    <div class="media-body">
+                        Item 1
+                        <p class="line-clamp-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="table-view">
+                <li class="table-view-cell media">
+                    <a class="navigate-right" data-toggle="modal" data-target="#modal01" data-subject="test1" data-photo="http://placehold.it/42x42" data-article="testtest">
+                    <div class="media-body">
+                        Item 1
+                        <p class="line-clamp-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="table-view">
+                <li class="table-view-cell media">
+                    <a class="navigate-right" data-toggle="modal" data-target="#modal01" data-subject="test1" data-photo="http://placehold.it/42x42" data-article="testtest">
+                    <div class="media-body">
+                        Item 1
+                        <p class="line-clamp-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+        </main>
+    </section>
+
+
+
+    
 
 
 

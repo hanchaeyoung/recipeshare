@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모달 테스트</title>
+    <link rel="stylesheet" href="https://supsok.github.io/gbsw/touchstrap/css/touchstrap.css">
+</head>
+<body>
+    <section class="page center">
+        <header class="bar bar-nav">
+            <h1 class="title">JSON TEST</h1>
+        </header>
+
+        <main class="content">
+            <div class="content-padded">
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal01">모달 호출</button>
+            </div>
+        </main>
+    </section>
+
+    <section class="modal" id="modal01">
+        <header class="bar bar-nav">
+            <h1 class="title"></h1>
+        </header>
+
+        <main class="content">
+            <div class="content-padded">
+
+            </div>
+        </main>
+    </section>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://supsok.github.io/gbsw/touchstrap/js/touchstrap.js"></script>
+
+    <script>
+        // https://jsonplaceholder.typicode.com/
+
+        // fetch('https://jsonplaceholder.typicode.com/todos/1')
+        // .then(response => response.json())
+        // .then(json => console.log(json))
+
+        $('#modal01').on('show.rc.modal', function(event) {
+            const modal = $(this)
+            fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(members => {
+            const name = members[6].name;
+            modal.find('.title').text(name)
+            console.log('name : ', name)
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "name": "test 1",
+        "email": "test1@gmail.com",
+        "address": "의성",
+        "age": 19
+    },
+
+    {
+        "id": 2,
+        "name": "test 2",
+        "email": "test2@naver.com",
+        "address": "대구",
+        "age": 19
+    },
+
+    {
+        "id": 3,
+        "name": "test 3",
+        "email": "test3@gmail.com",
+        "address": "안동",
+        "age": 19
+    }
+]
